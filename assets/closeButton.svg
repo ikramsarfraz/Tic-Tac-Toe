@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <filter id="Subtraction_10" x="77.506" y="80.507" width="344.984" height="344.985" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Subtraction_11" x="77.507" y="80.507" width="344.985" height="344.984" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="closeButton" transform="translate(-1285 -205)">
+    <circle id="Ellipse_18" data-name="Ellipse 18" cx="250" cy="250" r="250" transform="translate(1285 205)" fill="#a0e8b8"/>
+    <g transform="matrix(1, 0, 0, 1, 1285, 205)" filter="url(#Subtraction_10)">
+      <path id="Subtraction_10-2" data-name="Subtraction 10" d="M-11883.431,333.2a14.906,14.906,0,0,1-10.608-4.392l-35.354-35.357a14.894,14.894,0,0,1-4.395-10.605,14.9,14.9,0,0,1,4.395-10.608l102.53-102.53,56.567,56.568-102.531,102.532A14.9,14.9,0,0,1-11883.431,333.2Zm169.7-163.492-56.568-56.568,102.531-102.531a14.9,14.9,0,0,1,10.606-4.394,14.9,14.9,0,0,1,10.606,4.394l35.354,35.354a14.906,14.906,0,0,1,4.394,10.608,14.9,14.9,0,0,1-4.394,10.605l-102.53,102.532Z" transform="translate(12020.29 80.29)" fill="#db6c6c"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 1285, 205)" filter="url(#Subtraction_11)">
+      <path id="Subtraction_11-2" data-name="Subtraction 11" d="M276.63,326.984a14.9,14.9,0,0,1-10.607-4.393L163.493,220.061l56.568-56.569,102.53,102.531a15,15,0,0,1,0,21.213l-35.355,35.356A14.9,14.9,0,0,1,276.63,326.984ZM106.924,163.493h0L4.394,60.962a15,15,0,0,1,0-21.213L39.749,4.393a15,15,0,0,1,21.213,0l102.53,102.531-56.568,56.569Z" transform="translate(86.51 86.51)" fill="#db6c6c"/>
+    </g>
+    <rect id="Rectangle_50" data-name="Rectangle 50" width="80" height="80" transform="translate(1535 398.431) rotate(45)" fill="#db6c6c"/>
+  </g>
+</svg>

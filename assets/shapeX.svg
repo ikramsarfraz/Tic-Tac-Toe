@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="417.503" height="418.45" viewBox="0 0 417.503 418.45">
+  <defs>
+    <filter id="shapeX" x="0" y="0" width="417.503" height="418.45" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="shapeX-2" data-name="shapeX" transform="translate(-230.269 -242.335)">
+    <g transform="matrix(1, 0, 0, 1, 230.27, 242.34)" filter="url(#shapeX)">
+      <path id="shapeX-3" data-name="shapeX" d="M-3763.743,407.13l-106.1-106.1-106.1,106.1a30,30,0,0,1-42.426,0l-42.434-42.434a30,30,0,0,1,0-42.426l106.1-106.1-106.051-106.051a30,30,0,0,1,0-42.426l42.434-42.434a30,30,0,0,1,42.426,0l106.052,106.051L-3763.8,25.254a30,30,0,0,1,42.426,0l42.434,42.434a30,30,0,0,1,0,42.426l-106.051,106.051,106.1,106.1a30,30,0,0,1,0,42.426l-42.435,42.434a29.9,29.9,0,0,1-21.213,8.787A29.906,29.906,0,0,1-3763.743,407.13Z" transform="translate(4078.6 -16.47)" fill="#db6c6c"/>
+    </g>
+  </g>
+</svg>

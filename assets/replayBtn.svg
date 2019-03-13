@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="538" height="519" viewBox="0 0 538 519">
+  <defs>
+    <filter id="Rectangle_15" x="10" y="0" width="518" height="519" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_18" x="0" y="200" width="538" height="119" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Union_1" x="179" y="169" width="179.45" height="168.001" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="replayBtn" transform="translate(-691 -290)">
+    <g id="Group_2" data-name="Group 2">
+      <g transform="matrix(1, 0, 0, 1, 691, 290)" filter="url(#Rectangle_15)">
+        <rect id="Rectangle_15-2" data-name="Rectangle 15" width="500" height="500" rx="250" transform="translate(519) rotate(90)" fill="#fff"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 691, 290)" filter="url(#Rectangle_18)">
+        <rect id="Rectangle_18-2" data-name="Rectangle 18" width="100" height="520" rx="20" transform="translate(529 200) rotate(90)" fill="#fff"/>
+      </g>
+    </g>
+    <circle id="Ellipse_4" data-name="Ellipse 4" cx="175" cy="175" r="175" transform="translate(785 365)" fill="#a0e8b8"/>
+    <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(810 390)" fill="#fff" stroke="#90e2ab" stroke-width="4">
+      <circle cx="150" cy="150" r="150" stroke="none"/>
+      <circle cx="150" cy="150" r="148" fill="none"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 691, 290)" filter="url(#Union_1)">
+      <path id="Union_1-2" data-name="Union 1" d="M-5924.192,144.107a74.757,74.757,0,0,1-23.84-16.073,74.751,74.751,0,0,1-16.073-23.839A74.55,74.55,0,0,1-5970,75a74.55,74.55,0,0,1,5.895-29.194,74.751,74.751,0,0,1,16.073-23.839,74.757,74.757,0,0,1,23.84-16.073A74.533,74.533,0,0,1-5895,0,74.535,74.535,0,0,1-5865.8,5.894a74.753,74.753,0,0,1,23.839,16.073,74.741,74.741,0,0,1,16.073,23.839q.369.873.716,1.755l16.625-3.231-20.97,31.088-31.089-20.97,13.727-2.668A52.839,52.839,0,0,0-5894.375,22.5,53.185,53.185,0,0,0-5947.5,75.624a53.185,53.185,0,0,0,53.125,53.124,53.131,53.131,0,0,0,34.195-12.5h27.838a75.519,75.519,0,0,1-9.623,11.782,74.753,74.753,0,0,1-23.839,16.073A74.509,74.509,0,0,1-5895,150,74.507,74.507,0,0,1-5924.192,144.107Z" transform="translate(6158 175)" fill="#a0e8b8"/>
+    </g>
+  </g>
+</svg>

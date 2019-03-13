@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tic Tac Toe</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div class="container-fluid h-100" id="landingPageContainer">
+      <div class="row h-100 align-items-center justify-content-between">
+        <div class="col text-center">
+          <p id="landingPageHeader">
+            T<span id="redI">I</span>C <span id="whiteTAC">TAC</span> T<span
+              id="blueO"
+              >O</span
+            >E
+          </p>
+          <img id="shapeO1" src="assets/shapeO.svg" alt="" />
+          <img id="shapeO2" src="assets/shapeO.svg" alt="" />
+          <img id="shapeO3" src="assets/shapeO.svg" alt="" />
+          <img id="shapeX1" src="assets/shapeX.svg" alt="" />
+          <img id="shapeX2" src="assets/shapeX.svg" alt="" />
+          <img id="shapeX3" src="assets/shapeX.svg" alt="" />
+          <svg
+            id="startBtnContainer"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="129.574"
+            height="200.513"
+            viewBox="0 0 129.574 200.513"
+          >
+            <defs>
+              <linearGradient
+                id="linear-gradient"
+                x1="0.5"
+                x2="0.5"
+                y2="1"
+                gradientUnits="objectBoundingBox"
+              >
+                <stop id="startClr" offset="0" stop-color="#db6c6c" />
+                <stop id="stopClr" offset="1" stop-color="#6cc0db" />
+              </linearGradient>
+              <filter
+                id="startButton"
+                x="0"
+                y="0"
+                width="129.574"
+                height="200.513"
+                filterUnits="userSpaceOnUse"
+              >
+                <feOffset dy="10" input="SourceAlpha" />
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feFlood flood-opacity="0.161" />
+                <feComposite operator="in" in2="blur" />
+                <feComposite in="SourceGraphic" />
+              </filter>
+            </defs>
+            <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#startButton)">
+              <path
+                id="startButton-2"
+                data-name="startButton"
+                d="M-7911.084,181.513h0L-7938.13,155.4l-.83-47.524h6.022a10.011,10.011,0,0,0,10-10V83.64a10.011,10.011,0,0,0-10-10h-6.619l-.813-46.6L-7914.251,0l77.315,74.661a17.5,17.5,0,0,1,5.064,4.891l.014.012a17.48,17.48,0,0,1,3.06,9.909,17.413,17.413,0,0,1-3.173,10.065l.026.026-.168.174a17.567,17.567,0,0,1-3.473,3.595l-75.5,78.18Z"
+                transform="translate(7949.37)"
+                fill="url(#linear-gradient)"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid h-100" id="playerIdentificationContainer">
+      <div
+        class="row h-50 align-items-center justify-content-center"
+        id="playerOneIDContainer"
+      >
+        <div class="col text-center ">
+          <p id="playerOne">Player 1</p>
+        </div>
+        <div class="col text-center " id="playerOneIdentityContainer">
+          <p id="playerOneIdentity">Player 1</p>
+        </div>
+      </div>
+      <div
+        class="row h-50 align-items-center justify-content-center"
+        id="playerTwoIDContainer"
+      >
+        <div class="col text-center " id="playerTwoIdentityContainer">
+          <p id="playerTwoIdentity">Player 2</p>
+        </div>
+        <div class="col text-center ">
+          <p id="playerTwo">Player 2</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid h-100">
+      <div class="row h-100 align-items-center justify-content-center">
+        <div class="col-auto text-center" id="gameContainer">
+          <div class="row ">
+            <div class="col" id="box1"></div>
+            <div class="col" id="box2"></div>
+            <div class="col" id="box3"></div>
+          </div>
+          <div class="row align-items-center justify-content-center">
+            <div class="col" id="box4"></div>
+            <div class="col" id="box5"></div>
+            <div class="col" id="box6"></div>
+          </div>
+          <div class="row align-items-center justify-content-center">
+            <div class="col" id="box7"></div>
+            <div class="col" id="box8"></div>
+            <div class="col" id="box9"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid h-100" id="scoresContainer">
+      <div class="row h-100 align-items-center justify-content-between">
+        <div class="col-4 text-center">
+          <p id="playerOneScore">0</p>
+        </div>
+
+        <div class="col-4 text-center">
+          <p id="playerTwoScore">0</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid h-100" id="msgLabelContainer">
+      <div class="row h-100 align-items-center justify-content-between">
+        <div class="col text-center">
+          <p id="msgLabel">You WIN!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="closeButtonContainer">
+      <div class="row">
+        <div class="col">
+          <svg
+            id="closeBtn"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 500 500"
+          >
+            <defs>
+              <filter
+                id="Subtraction_10"
+                x="77.506"
+                y="80.507"
+                width="344.984"
+                height="344.985"
+                filterUnits="userSpaceOnUse"
+              >
+                <feOffset dy="3" input="SourceAlpha" />
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feFlood flood-opacity="0.161" />
+                <feComposite operator="in" in2="blur" />
+                <feComposite in="SourceGraphic" />
+              </filter>
+              <filter
+                id="Subtraction_11"
+                x="77.507"
+                y="80.507"
+                width="344.985"
+                height="344.984"
+                filterUnits="userSpaceOnUse"
+              >
+                <feOffset dy="3" input="SourceAlpha" />
+                <feGaussianBlur stdDeviation="3" result="blur-2" />
+                <feFlood flood-opacity="0.161" />
+                <feComposite operator="in" in2="blur-2" />
+                <feComposite in="SourceGraphic" />
+              </filter>
+            </defs>
+            <g id="closeButton" transform="translate(-1285 -205)">
+              <circle
+                id="Ellipse_18"
+                data-name="Ellipse 18"
+                cx="250"
+                cy="250"
+                r="250"
+                transform="translate(1285 205)"
+                fill="#ffffff"
+              />
+              <g
+                transform="matrix(1, 0, 0, 1, 1285, 205)"
+                filter="url(#Subtraction_10)"
+              >
+                <path
+                  id="Subtraction_10-2"
+                  data-name="Subtraction 10"
+                  d="M-11883.431,333.2a14.906,14.906,0,0,1-10.608-4.392l-35.354-35.357a14.894,14.894,0,0,1-4.395-10.605,14.9,14.9,0,0,1,4.395-10.608l102.53-102.53,56.567,56.568-102.531,102.532A14.9,14.9,0,0,1-11883.431,333.2Zm169.7-163.492-56.568-56.568,102.531-102.531a14.9,14.9,0,0,1,10.606-4.394,14.9,14.9,0,0,1,10.606,4.394l35.354,35.354a14.906,14.906,0,0,1,4.394,10.608,14.9,14.9,0,0,1-4.394,10.605l-102.53,102.532Z"
+                  transform="translate(12020.29 80.29)"
+                  fill="#a0e8b8"
+                />
+              </g>
+              <g
+                transform="matrix(1, 0, 0, 1, 1285, 205)"
+                filter="url(#Subtraction_11)"
+              >
+                <path
+                  id="Subtraction_11-2"
+                  data-name="Subtraction 11"
+                  d="M276.63,326.984a14.9,14.9,0,0,1-10.607-4.393L163.493,220.061l56.568-56.569,102.53,102.531a15,15,0,0,1,0,21.213l-35.355,35.356A14.9,14.9,0,0,1,276.63,326.984ZM106.924,163.493h0L4.394,60.962a15,15,0,0,1,0-21.213L39.749,4.393a15,15,0,0,1,21.213,0l102.53,102.531-56.568,56.569Z"
+                  transform="translate(86.51 86.51)"
+                  fill="#a0e8b8"
+                />
+              </g>
+              <rect
+                id="Rectangle_50"
+                data-name="Rectangle 50"
+                width="80"
+                height="80"
+                transform="translate(1535 398.431) rotate(45)"
+                fill="#ffffff"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="playAgainBtnContainer">
+      <div class="row ">
+        <div class="col text-center">
+          <svg
+            id="playAgainBtn"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 538 519"
+          >
+            <defs>
+              <filter
+                id="Rectangle_15"
+                x="10"
+                y="0"
+                width="518"
+                height="519"
+                filterUnits="userSpaceOnUse"
+              >
+                <feOffset dy="10" input="SourceAlpha" />
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feFlood flood-opacity="0.161" />
+                <feComposite operator="in" in2="blur" />
+                <feComposite in="SourceGraphic" />
+              </filter>
+              <filter
+                id="Rectangle_18"
+                x="0"
+                y="200"
+                width="538"
+                height="119"
+                filterUnits="userSpaceOnUse"
+              >
+                <feOffset dy="10" input="SourceAlpha" />
+                <feGaussianBlur stdDeviation="3" result="blur-2" />
+                <feFlood flood-opacity="0.161" />
+                <feComposite operator="in" in2="blur-2" />
+                <feComposite in="SourceGraphic" />
+              </filter>
+              <filter
+                id="Union_1"
+                x="179"
+                y="169"
+                width="179.45"
+                height="168.001"
+                filterUnits="userSpaceOnUse"
+              >
+                <feOffset dy="3" input="SourceAlpha" />
+                <feGaussianBlur stdDeviation="3" result="blur-3" />
+                <feFlood flood-opacity="0.161" />
+                <feComposite operator="in" in2="blur-3" />
+                <feComposite in="SourceGraphic" />
+              </filter>
+            </defs>
+            <g id="replayBtn" transform="translate(-691 -290)">
+              <g id="Group_2" data-name="Group 2">
+                <g
+                  transform="matrix(1, 0, 0, 1, 691, 290)"
+                  filter="url(#Rectangle_15)"
+                >
+                  <rect
+                    id="Rectangle_15-2"
+                    data-name="Rectangle 15"
+                    width="500"
+                    height="500"
+                    rx="250"
+                    transform="translate(519) rotate(90)"
+                    fill="#fff"
+                  />
+                </g>
+                <g
+                  transform="matrix(1, 0, 0, 1, 691, 290)"
+                  filter="url(#Rectangle_18)"
+                >
+                  <rect
+                    id="Rectangle_18-2"
+                    data-name="Rectangle 18"
+                    width="100"
+                    height="520"
+                    rx="20"
+                    transform="translate(529 200) rotate(90)"
+                    fill="#fff"
+                  />
+                </g>
+              </g>
+              <circle
+                id="Ellipse_4"
+                data-name="Ellipse 4"
+                cx="175"
+                cy="175"
+                r="175"
+                transform="translate(785 365)"
+                fill="#a0e8b8"
+              />
+              <g
+                id="Ellipse_3"
+                data-name="Ellipse 3"
+                transform="translate(810 390)"
+                fill="#fff"
+                stroke="#90e2ab"
+                stroke-width="4"
+              >
+                <circle cx="150" cy="150" r="150" stroke="none" />
+                <circle cx="150" cy="150" r="148" fill="none" />
+              </g>
+              <g
+                transform="matrix(1, 0, 0, 1, 691, 290)"
+                filter="url(#Union_1)"
+              >
+                <path
+                  id="Union_1-2"
+                  data-name="Union 1"
+                  d="M-5924.192,144.107a74.757,74.757,0,0,1-23.84-16.073,74.751,74.751,0,0,1-16.073-23.839A74.55,74.55,0,0,1-5970,75a74.55,74.55,0,0,1,5.895-29.194,74.751,74.751,0,0,1,16.073-23.839,74.757,74.757,0,0,1,23.84-16.073A74.533,74.533,0,0,1-5895,0,74.535,74.535,0,0,1-5865.8,5.894a74.753,74.753,0,0,1,23.839,16.073,74.741,74.741,0,0,1,16.073,23.839q.369.873.716,1.755l16.625-3.231-20.97,31.088-31.089-20.97,13.727-2.668A52.839,52.839,0,0,0-5894.375,22.5,53.185,53.185,0,0,0-5947.5,75.624a53.185,53.185,0,0,0,53.125,53.124,53.131,53.131,0,0,0,34.195-12.5h27.838a75.519,75.519,0,0,1-9.623,11.782,74.753,74.753,0,0,1-23.839,16.073A74.509,74.509,0,0,1-5895,150,74.507,74.507,0,0,1-5924.192,144.107Z"
+                  transform="translate(6158 175)"
+                  fill="#a0e8b8"
+                />
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

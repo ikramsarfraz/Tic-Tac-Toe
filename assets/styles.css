@@ -1,0 +1,246 @@
+body {
+  height: 100vh;
+  background-color: #a0e8b8;
+}
+
+#shapeOContainer {
+  width: 350px;
+}
+#shapeXContainer {
+  width: 350px;
+}
+
+#landingPageContainer {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(to bottom right, #a0e8b8, #333);
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 200px;
+  transition: transform 0.6s;
+  -webkit-transition: transform 0.6s;
+}
+
+#redI {
+  color: #db6c6c;
+}
+
+#whiteTAC {
+  color: #fff;
+}
+
+#blueO {
+  color: #6cc0db;
+}
+
+#shapeO1 {
+  position: absolute;
+  top: 300px;
+  left: 400px;
+  width: 40px;
+}
+
+#shapeO2 {
+  position: absolute;
+  top: -60px;
+  right: 300px;
+  width: 70px;
+}
+
+#shapeO3 {
+  position: absolute;
+  top: 600px;
+  right: 300px;
+  width: 90px;
+}
+
+#shapeX1 {
+  position: absolute;
+  top: 80px;
+  left: 200px;
+  width: 40px;
+}
+
+#shapeX2 {
+  position: absolute;
+  top: -110px;
+  left: 700px;
+  width: 70px;
+}
+
+#shapeX3 {
+  position: absolute;
+  top: 200px;
+  right: 320px;
+  width: 90px;
+  z-index: -1;
+}
+
+#startBtnContainer {
+  cursor: pointer;
+  transition: transform 0.6s;
+  -webkit-transition: transform 0.6s;
+}
+#startBtnContainer:hover {
+  transform: translate(8px, 8px);
+  transition: transform 0.6s;
+  -webkit-transition: transform 0.6s;
+}
+
+#startBtnContainer:hover #linear-gradient #startClr {
+  stop-color: #6cc0db;
+}
+
+#startBtnContainer:hover #linear-gradient #stopClr {
+  stop-color: #db6c6c;
+}
+
+#playerIdentificationContainer {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #333;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 200px;
+  color: #a0e8b8;
+  transition: transform 0.6s;
+  -webkit-transition: transform 0.6s;
+}
+
+#playerIdentificationContainer #playerOneIDContainer {
+  border-bottom: 3px solid #fff;
+}
+
+#playerIdentificationContainer #playerTwoIDContainer {
+  border-top: 3px solid #fff;
+}
+
+#playerIdentificationContainer .row .col {
+  transition: transform 0.6s, opacity 0.6s ease-in-out;
+  -webkit-transition: transform 0.6s, opacity 0.6s ease-in-out;
+  opacity: 0;
+}
+
+#gameContainer .row .col {
+  border: 5px solid #fff;
+  background-color: #fff;
+  width: 150px;
+  height: 150px;
+  margin: 2px;
+  transition: transform 0.4s, border-radius 0.4s;
+  -webkit-transition: transform 0.4s, border-radius 0.4s;
+}
+
+#gameContainer .row .col:hover {
+  transition: background-color 0.6s, transform 0.4s, border-radius 0.4s;
+  -webkit-transition: background-color 0.6s, transform 0.4s, border-radius 0.4s;
+}
+
+#gameContainer .row .col svg {
+  width: 100px;
+  padding: 20% 0;
+}
+
+.boxActiveByPlayerOne {
+  background-color: #333;
+}
+
+.boxActiveByPlayerTwo {
+  background-color: #888;
+}
+
+#playAgainBtnContainer {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  transition: visibility 0s 0.8s, opacity 0.8s ease-in-out;
+  -webkit-transition: visibility 0s 0.8s, opacity 0.8s ease-in-out;
+  opacity: 0;
+}
+
+#playAgainBtn {
+  width: 125px;
+  height: 120px;
+  cursor: pointer;
+}
+
+#playAgainBtn:hover {
+  transform: rotate(360deg);
+  transition: transform 0.8s ease-in-out;
+  -webkit-transition: transform 0.8s ease-in-out;
+}
+
+#playAgainBtn:hover #Rectangle_15-2 {
+  fill: #333;
+}
+
+#playAgainBtn:hover #Rectangle_18-2 {
+  fill: #333;
+}
+
+.col p {
+  margin: 0;
+}
+
+#scoresContainer {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 320px;
+  z-index: -1;
+  color: #fff;
+}
+
+#msgLabelContainer {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 200px;
+  color: #db6c6c;
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out;
+  z-index: 2;
+}
+
+#closeButtonContainer {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  width: 100px;
+}
+
+#closeBtn {
+  transition: transform 0.8s;
+  -webkit-transition: transform 0.8s;
+  cursor: pointer;
+}
+
+#closeBtn:hover {
+  transform: rotate(360deg);
+  transition: transform 0.8s ease-in-out;
+  -webkit-transition: transform 0.8s ease-in-out;
+}
+
+#closeBtn:hover circle {
+  fill: #a0e8b8;
+}
+
+#closeBtn:hover #Subtraction_10-2 {
+  fill: #db6c6c;
+}
+
+#closeBtn:hover #Subtraction_11-2 {
+  fill: #db6c6c;
+}
+
+#closeBtn:hover rect {
+  fill: #db6c6c;
+}
